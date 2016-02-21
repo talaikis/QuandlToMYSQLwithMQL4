@@ -8,9 +8,6 @@
 #property version   "0.5"
 #property strict
 
-//#property indicator_buffers 1
-//#property indicator_color1 clrNONE
-
 // QUandl symbol
 extern string Symbol    = "YAHOO/INDEX_VDAX";
 
@@ -18,7 +15,7 @@ extern string Symbol    = "YAHOO/INDEX_VDAX";
 extern string _tablename = "YAHOO_INDEX_VDAX";
 
 //here's your Quandl ayth cde
-extern string _authCode = "-----------------";
+extern string _authCode = "your Quandl auth ode here>";
 
 extern string host      = "localhost";
 extern int    port      = 3306;
@@ -90,11 +87,11 @@ void OnTick()
 
         if (DB == -1)
         {
-            Print("Connection to <a href="http://www.talaikis.com/mysql/">MySQL</a> database failed! Error: " + MySqlErrorDescription);
+            Print("Connection to MySQL database failed! Error: " + MySqlErrorDescription);
         }
         else
         {
-            Print("Connected to <a href="http://www.talaikis.com/mysql/">MySQL</a>! DB_ID#", DB);
+            Print("Connected to MySQL! DB_ID#", DB);
         }
 
         //Print(SymbolRep+" rep symbol");
